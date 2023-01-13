@@ -1,0 +1,208 @@
+{
+  "//" : " Exemplo de configuração para instância web de métricas " ,
+  "//" : " ================================================= ======================== " ,
+
+  "token" : " GITHUB API TOKEN " ,           "//" : " Token pessoal do GitHub (obrigatório) " ,
+  "modes" : [ " embed " , " insights " ],        "//" : " Modos habilitados para instância da Web " ,
+  "restricted" : [],                      "//" : " Usuários autorizados (vazio para desabilitar) " ,
+  "maxusers" : 0 ,                         "//" : " Máximo de usuários, (0 para desabilitar) " ,
+  "cached" : 3600000 ,                     "//" : " Métricas renderizadas de tempo de cache (0 para desabilitar) " ,
+  "ratelimiter" : null ,                   "//" : " Limitador de taxa (consulte a documentação do limite de taxa expressa) " ,
+  "porta" : 3000 ,                          "//" : " porta de escuta " ,
+  "otimizar" : true ,                      "//" : " otimização SVG " ,
+  "debug" : false ,                        "//" : " Logs de depuração " ,
+  "debug.headless" : false ,               "//" : " Depurar o processo do manipulador de marionetes " ,
+  "mocked" : false ,                       "//" : " Use dados simulados em vez de APIs ao vivo (use 'force' para usar token simulado mesmo se o token real estiver definido) " ,
+  "repositories" : 100 ,                   "//" : " Número de repositórios a serem usados " ,
+  "preenchimento" : [ " 0 " , " 8 + 11% " ],           "//" : " Preenchimento da imagem (padrão) " ,
+  "outputs" : [ " svg " , " png " , " json " ],     "//" : " Formatos de saída de imagem (vazio para habilitar todos) " ,
+  "hospedado" : {
+    "by" : " " ,                            "//" : " Host da instância da Web (exibido no rodapé) " ,
+    "link" : " " ,                          "//" : " Link do host da instância da Web (exibido no rodapé) "
+  },
+  "auth" :{
+    "id" : null ,                          "//" : " id do cliente GitHub OAUTH " ,
+    "secret" : null ,                      "//" : " Segredo do cliente GitHub OAUTH " ,
+    "url" : " https://example.com " ,         "//" : " GitHub OAUTH callback url (deve ser o mesmo que o host da instância da web) "
+  },
+  "api" :{
+    "rest" : null ,                        "//" : " endpoint personalizado da API REST do GitHub " ,
+    "graphql" : null ,                     "//" : " endpoint personalizado da API GraphQL do GitHub "
+  },
+  "controle" :{
+    "token" : null ,                       "//" : " Token de controle (pode ser usado por serviços externos para executar ações na instância, como interrompê-la para reimplantações) "
+  },
+  "comunidade" : {
+    "templates" : [],                     "//" : " Modelos de comunidade adicionais para configurar "
+  },
+  "modelos" : {
+    "padrão" : " clássico " ,                "//" : " modelo padrão " ,
+    "enabled" : [],                       "//" : " Modelos habilitados (vazio para habilitar todos) "
+  },
+  "extras" : {
+    "default" : false ,                    "//" : " Estado padrão dos extras (recomendado deixar 'false' a menos que esteja no modo de depuração) " ,
+    "features" : false ,                   "//" : " Ativar recursos extras (recomendado deixar 'false' em instâncias da web), veja abaixo os recursos suportados " ,
+                                        "//" : " _________________________________________________________________________ " ,
+                                        "//" : " metrics.setup.community.templates | Permitir download de modelos de comunidade " ,
+                                        "//" : " metrics.setup.community.presets | Permitir uso de predefinições da comunidade " ,
+                                        "//" : " metrics.api.github.overuse | Permitir solicitações intensivas de API do GitHub " ,
+                                        "//" : " metrics.api.* | Permitir o uso de solicitações de API externas " ,
+                                        "//" : " metrics.cpu.overuse | Permitir solicitações intensivas de CPU " ,
+                                        "//" : " metrics.run.tempdir | Permitir acesso ao diretório temporário (operações de E/S podem ser executadas) " ,
+                                        "//" : " metrics.run.git | Permitir a execução do git " ,
+                                        "//" : " metrics.run.licensed | Permitir execução licenciada " ,
+                                        "//" : " metrics.run.user.cmd | Permite executar QUALQUER comando pelo usuário (USE COM CUIDADO!) " ,
+                                        "//" : " metrics.run.puppeteer.scrapping | Permitir executar o marionetista para extrair dados " ,
+                                        "//" : " metrics.run.puppeteer.user.css | Permitir executar CSS pelo usuário durante a renderização do marionetista " ,
+                                        "//" : " metrics.run.puppeteer.user.js | Permitir a execução de JavaScript pelo usuário durante a renderização do marionetista " ,
+                                        "//" : " metrics.npm.optional.* | Permitir o uso da dependência especificada " ,
+                                        "//" : " _________________________________________________________________________ " ,
+                                        "//" : " Recursos extras adicionais quando o usuário está logado no GitHub " ,
+    "logado" : [
+      " metrics.api.github.overuse "
+    ]
+  },
+  "plugins.default" : false ,              "//" : " Estado padrão do plug-in (recomendado deixar 'false' a menos que esteja no modo de depuração) " ,
+  "plugins" : {                           "//" : " Configuração global do plug -in " ,
+    "isocalendário" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in isocalendar "
+    },
+    "idiomas" :{
+      "enabled" : false ,                  "//" : " Ativar plugin de idiomas "
+    },
+    "astrônomos" :{
+      "worldmap.token" : null ,            "//" : " Token do mapa do mundo Stargazers " ,
+      "enabled" : false ,                  "//" : " Ativar plug -in de astrônomos "
+    },
+    "linhas" :{
+      "enabled" : false ,                  "//" : " Ativar plugin de linhas "
+    },
+    "tópicos" :{
+      "enabled" : false ,                  "//" : " Habilitar plugin de tópicos "
+    },
+    "estrelas" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de estrelas "
+    },
+    "licenças" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de licenças "
+    },
+    "hábitos" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de hábitos "
+    },
+    "contribuintes" :{
+      "enabled" : false ,                  "//" : " Habilitar plug-in de contribuidores "
+    },
+    "acompanhamento" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de acompanhamento "
+    },
+    "reações" :{
+      "enabled" : false ,                  "//" : " Ativar plugin de reações "
+    },
+    "pessoas" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de pessoas "
+    },
+    "introdução" :{
+      "enabled" : false ,                  "//" : " Habilitar plug-in de introdução "
+    },
+    "patrocinadores" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de patrocinadores "
+    },
+    "repositórios" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de repositórios "
+    },
+    "discussões" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de discussões "
+    },
+    "listas de estrelas" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de listas de estrelas "
+    },
+    "calendário" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de calendário "
+    },
+    "conquistas" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de conquistas "
+    },
+    "notável" :{
+      "enabled" : false ,                  "//" : " Habilitar plug-in notável "
+    },
+    "atividade" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de atividade "
+    },
+    "tráfego" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de tráfego "
+    },
+    "código" :{
+      "enabled" : false ,                  "//" : " Habilitar plug-in de código "
+    },
+    "essências" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in gists "
+    },
+    "projetos" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de projetos "
+    },
+    "linha do horizonte" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in skyline "
+    },
+    "suporte" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de suporte "
+    },
+    "velocidade da página" :{
+      "token" : " token de velocidade de página " ,
+      "enabled" : false ,                  "//" : " Ativar plug-in de velocidade de página "
+    },
+    "tweets" :{
+      "token" : " Token da API do Twitter " ,
+      "enabled" : false ,                  "//" : " Ativar plugin de tweets "
+    },
+    "stackoverflow" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in stackoverflow "
+    },
+    "anilista" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in aniList "
+    },
+    "música" :{
+      "token" : " token do provedor de música " ,
+      "enabled" : false ,                  "//" : " Ativar plug-in de música "
+    },
+    "postagens" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de postagens "
+    },
+    "rsrs" :{
+      "enabled" : false ,                  "//" : " Habilitar plugin rss "
+    },
+    "wakatime" :{
+      "token" : " Token da API WakaTime " ,
+      "enabled" : false ,                  "//" : " Ativar plug-in wakatime "
+    },
+    "leetcode" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in leetcode "
+    },
+    "xadrez" :{
+      "token" : " token da plataforma de xadrez " ,
+      "enabled" : false ,                  "//" : " Habilitar plug-in de xadrez "
+    },
+    "sorte" :{
+      "enabled" : false ,                  "//" : " Ativar plugin de fortuna "
+    },
+    "noturno" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in nightcout "
+    },
+    "poopmap" :{
+      "token" : " token da API PoopMap " ,
+      "enabled" : false ,                  "//" : " Ativar plug-in poopmap "
+    },
+    "captura de tela" :{
+      "enabled" : false ,                  "//" : " Ativar plug-in de captura de tela "
+    },
+    "esplatão" :{
+      "token" : " Token Splatnet " ,
+      "statink.token" : nulo ,             "//" : " token stat.ink " ,
+      "enabled" : false ,                  "//" : " Ativar plug-in splatoon "
+    },
+    "estoque" :{
+      "token" : " Token do Yahoo Finance " ,
+      "enabled" : false ,                  "//" : " Habilitar plugin de estoque "
+    },
+    "//" : " "
+  }
+}
