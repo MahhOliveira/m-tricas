@@ -1,0 +1,91 @@
+{
+  "nome" : " métricas " ,
+  "versão" : " 3.32.0-beta " ,
+  "description" : " Um gerador de infográficos com mais de 40 plug-ins e mais de 300 opções para exibir estatísticas sobre sua conta do GitHub e renderizá-las como SVG, Markdown, PDF ou JSON! " ,
+  "principal" : " index.mjs " ,
+  "scripts" : {
+    "start" : " node source/app/web/index.mjs " ,
+    "teste" : " jest --runInBand " ,
+    "test-contrib" : " jest --runInBand ci.test.js --noStackTrace " ,
+    "test-presets" : " jest --runInBand presets.test.js --noStackTrace " ,
+    "test-metrics" : " jest --runInBandmetrics.test.js " ,
+    "build" : " node.github/scripts/build.mjs " ,
+    "presets" : " node .github/scripts/presets_examples.mjs " ,
+    "quickstart" : " node .github/scripts/quickstart/index.mjs " ,
+    "preview" : " node.github/scripts/preview.mjs " ,
+    "linter" : " eslint source/**/*.mjs --quiet " ,
+    "dev" : " nodemon source/app/web/index.mjs -e mjs,css,ejs,json " ,
+    "postinstall" : " node node_modules/puppeteer/install.js " ,
+    "indepth" : " fonte do nó/plugins/idiomas/analisadores.mjs "
+  },
+  "repositório" : {
+    "tipo" : " git " ,
+    "url" : " git+https://github.com/lowlighter/metrics.git "
+  },
+  "autor" : " lowlighter " ,
+  "licença" : " MIT " ,
+  "erros" : {
+    "url" : " https://github.com/lowlighter/metrics/issues "
+  },
+  "homepage" : " https://github.com/lowlighter/metrics#readme " ,
+  "dependências" : {
+    "@actions/core" : " ^1.10.0 " ,
+    "@actions/github" : " ^5.1.1 " ,
+    "@faker-js/faker" : " ^7.6.0 " ,
+    "@octokit/graphql" : " ^5.0.4 " ,
+    "@octokit/rest" : " ^19.0.5 " ,
+    "@primer/css" : " ^20.8.0 " ,
+    "@primer/octicons" : " ^17.10.1 " ,
+    "axios" : " ^1.1.3 " ,
+    "área de transferência" : " ^2.0.11 " ,
+    "compressão" : " ^1.7.4 " ,
+    "csso" : " ^5.0.5 " ,
+    "d3" : " ^7.8.0 " ,
+    "d3-node" : " ^3.0.0 " ,
+    "ejs" : " ^3.1.8 " ,
+    "emoji-name-map" : " ^1.2.9 " ,
+    "expresso" : " ^4.18.2 " ,
+    "express-rate-limit" : " ^6.7.0 " ,
+    "tipo de arquivo" : " ^18.0.0 " ,
+    "js-yaml" : " ^4.1.0 " ,
+    "linguist-js" : " ^2.5.3 " ,
+    "marcado" : " ^4.2.5 " ,
+    "cache de memória" : " ^0.2.0 " ,
+    "minimatch" : " ^5.1.2 " ,
+    "node-fetch" : " ^3.3.0 " ,
+    "open-graph-scraper" : " ^5.0.3 " ,
+    "png-js" : " ^1.0.0 " ,
+    "prismjs" : " ^1.29.0 " ,
+    "marionetista" : " ^19.5.0 " ,
+    "purgecss" : " ^5.0.0 " ,
+    "rss-parser" : " ^3.12.0 " ,
+    "sanitize-html" : " ^2.8.1 " ,
+    "sharp" : " ^0.31.3 " ,
+    "simples-git" : " ^3.15.1 " ,
+    "svgo" : " ^3.0.2 " ,
+    "twemoji-parser" : " ^14.0.0 " ,
+    "vue" : " ^2.7.1 " ,
+    "vue-prism-component" : " ^1.2.0 " ,
+    "xml-formatter" : " ^3.2.0 "
+  },
+  "devDependências" : {
+    "eslint" : " ^8.31.0 " ,
+    "brincadeira" : " ^29.3.1 " ,
+    "libxmljs2" : " ^0.31.0 "
+  },
+  "brincadeira" : {
+    "testEnvironment" : " nó " ,
+    "testTimeout" : 60000 ,
+    "transformar" : {}
+  },
+  "opcionalDependências" : {
+    "@googlemaps/google-maps-services-js" : " ^3.3.26 " ,
+    "chess.js" : " ^1.0.0-alpha.0 " ,
+    "cor" : " ^4.2.3 " ,
+    "gifencoder" : " ^2.0.1 " ,
+    "libxmljs2" : " ^0.31.0 " ,
+    "node-chartist" : " ^1.0.5 " ,
+    "rss" : " ^1.2.2 " ,
+    "yargs-parser" : " ^21.1.1 "
+  }
+}
